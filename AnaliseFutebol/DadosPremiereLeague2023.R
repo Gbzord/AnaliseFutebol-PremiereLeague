@@ -4,7 +4,7 @@ library(ggplot2)
 library(ggrepel)
 
 # DEFINIR DADOS MANUALMENTE (SEM DEPENDER DA COLETA)
-cat("📊 Criando dados de exemplo para análise...\n")
+cat("Criando dados de exemplo para análise...\n")
 
 times <- c("Arsenal", "Man City", "Liverpool", "Chelsea", "Tottenham", 
            "Man United", "Newcastle", "Brighton", "West Ham", "Crystal Palace")
@@ -55,7 +55,7 @@ p2 <- ggplot(analise, aes(x = criatividade_ofensiva, y = intensidade_ataque, lab
 print(p2)
 
 # ANÁLISE DEFENSIVA
-cat("🛡️ Analisando métricas defensivas...\n")
+cat(" Analisando métricas defensivas...\n")
 analise_defesa <- dados_equipes %>%
   mutate(
     intensidade_pressing = round(Press / MP, 1),
@@ -79,8 +79,9 @@ p3 <- ggplot(analise_defesa, aes(x = intensidade_pressing, y = PPDA, label = Tea
 
 print(p3)
 
-cat("✅ Análise concluída com sucesso!\n")
-cat("📊 Foram geradas 3 visualizações principais:\n")
+cat("Análise concluída com sucesso!\n")
+cat("Foram geradas 3 visualizações principais:\n")
 cat("   1. Eficiência ofensiva (xG vs Gols)\n")
 cat("   2. Criatividade vs Intensidade\n")
+
 cat("   3. Análise defensiva (Pressing)\n")
