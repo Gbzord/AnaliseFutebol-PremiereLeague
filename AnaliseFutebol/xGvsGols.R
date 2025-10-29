@@ -1,5 +1,5 @@
 # VISUALIZAÇÃO 1: xG vs Gols
-cat("📈 Criando visualizações...\n")
+cat(" Criando visualizações...\n")
 p1 <- ggplot(analise, aes(x = xG, y = Gls, label = Team)) +
   geom_point(aes(size = eficiencia_finalizacao, color = eficiencia_finalizacao), alpha = 0.7) +
   geom_text_repel(size = 3) +
@@ -11,5 +11,6 @@ p1 <- ggplot(analise, aes(x = xG, y = Gls, label = Team)) +
        color = "Eficiência", size = "Eficiência") +
   theme_minimal() +
   theme(plot.title = element_text(face = "bold"))
+
 
 print(p1)
