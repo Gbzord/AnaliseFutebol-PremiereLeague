@@ -1,5 +1,5 @@
 # ANÁLISE OFENSIVA
-cat("🔍 Realizando análise ofensiva...\n")
+cat("Realizando análise ofensiva...\n")
 analise <- dados_equipes %>%
   mutate(
     eficiencia_finalizacao = round(Gls / xG, 2),
@@ -10,5 +10,6 @@ analise <- dados_equipes %>%
   select(Team, Gls, xG, eficiencia_finalizacao, criatividade_ofensiva, 
          intensidade_ataque, eficiencia_passes) %>%
   arrange(desc(Gls))
+
 
 print(analise)
